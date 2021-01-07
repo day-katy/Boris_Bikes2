@@ -12,9 +12,22 @@ class DockingStation
   end
 
   def dock(bike)
-    @bike = bike
+    if @bike.nil?
+      @bike = bike
+    else
+      raise Exception.new
+    end
   end
 
   attr_reader :bike
 
 end
+
+
+=begin
+if !@bike.nil?
+  @bike = bike
+else
+  raise Exception.new
+end
+=end
