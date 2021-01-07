@@ -2,11 +2,13 @@ require_relative "bike"
 
 class DockingStation
 
+
   def initialize
+    @bike = nil
   end
 
   def release_bike
-    @bike = Bike.new
+    raise Exception.new
   end
 
   def dock(bike)
