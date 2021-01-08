@@ -2,13 +2,14 @@ require_relative "bike"
 
 class DockingStation
 
-  attr_reader :bike
+  #attr_reader :bike
   # def initialize
   #   @bike = nil
   # end
 
   def release_bike
-    raise
+    fail "No bikes docked" unless @bike
+    @bike 
   end
 
   def dock(bike)
@@ -20,10 +21,3 @@ class DockingStation
 
 
 
-=begin
-if !@bike.nil?
-  @bike = bike
-else
-  raise Exception.new
-end
-=end
